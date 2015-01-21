@@ -33,6 +33,24 @@
 /* Slide Nav
 -------------------------------------
 */
-//nav button scaling
+@media (max-width:890px) {
+    #slide-nav {
+            .content-box {padding:8px 12px;}
+            h1 {font-size:150%;}
+            #slide-buttons {padding-left:60px;}
+    }
+}
+@media (max-width:767px) {
+    #slide-nav {
+            #slide-buttons {padding-left:0;}
+    }
+}
+@media (max-width:550px) {
+    #slide-nav {
+            .content-box {padding:10px 15px;}
+            .button { padding-left:5%; width:95%;}
+            h1 {font-size:180%;}
+    }
+}
 
 @media (max-width:349px) {#slide-nav h1{font-size:140%;}}

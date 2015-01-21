@@ -1,23 +1,21 @@
 /* base.scss */
 @import 'rules';
 
-/* Globals */
+/* Addon Classes */
 .no-pad {padding-left:0; padding-right:0; margin-left:0; margin-right:0;}
-
-/* UI Elements */
 
 
 /*-------------------
 	Site Styling	
 -------------------*/
 /* Structure */
-#master {
+.container-fluid {
 	padding-top:15px;
 }
 
 /* Alien Kitty */
 #intro-kitty {
-	margin:50px 0 20px 0;
+	margin-bottom:10px;
 		.bubble-info, .bubble-git {
 			max-width:180px;
 			cursor:default;
@@ -27,8 +25,17 @@
 					padding:15px;
 				}
 		}
+        .bubble-git:hover, .bubble-git:active, .bubble-info:hover, .bubble-info:active {
+            .content-box.black {
+                border:1px solid #fff;
+                background-color:rgba(255, 255, 255, 0.77); 
+                @include box-shadow(0px 0px 5px 0px rgba(255, 255, 255, 0.42));
+            }
+            * {color:#000;}
+
+        }
 		.bubble-git {
-			cursor:pointer;
+            cursor:pointer;
 			position:relative;
 			left:0;
 		}
@@ -83,8 +90,8 @@
 	z-index:5000;
 }
 #alien-kitty.shift {margin-top:-30px;}
-#kitty-inside {position:relative;display:inline-block;width:25px; height:25px;margin-left:-35px;}
-#kitty-inside #alien-kitty {
+.kitty-inside {position:relative;display:inline-block;width:25px; height:25px;margin-left:-35px;}
+.kitty-inside #alien-kitty {
 	position:absolute;
 	top:0;
 	left:0;
@@ -95,23 +102,49 @@
 
 /* Navigation */
 #slide-nav {
-		.content-box {
-			@include transition(margin 0.5s ease);
-			padding:15px;
-			@include border-radius(15px);
-			display:inline-block;
-			margin:0 auto 10px auto;
-		}
-		.content-box.white {border:0;}
+    margin-bottom:30px;
+        #slide-buttons {
+            display:table;
+            margin:0 auto;
+        }
+		.content-box {padding:10px 25px;}
+        .button {
+            display:inline-block;
+            cursor:pointer;
+            margin-right:10px;
+        }
+        .button:hover, .button:active, .button.active {
+                .content-box.white {
+                    border:1px solid #000;
+                    background-color:rgba(0, 0, 0, 0.77); 
+                    @include box-shadow(0px 0px 5px 0px rgba(0, 0, 0, 0.42));
+                        * {color:#fff;}
+                }
+                
+        }
 		h1 {
 			text-align:center;
 			vertical-align:middle;
 		}
+        .current {dispay:block; width:95%; margin-left:5%;}
 }
-#slide-nav.morph {
+#slide-nav.up {
 		.content-box {
 			@include transition(all 0.5s ease);
 		}
+}
+
+
+//Main content area
+#content {
+        .page {display:none;}
+}
+#introduction {
+        img {
+            display:table;
+            margin:0 auto;
+            max-width:100%;   
+        }
 }
 
 /* Grab Media Queries */

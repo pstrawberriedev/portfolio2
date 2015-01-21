@@ -62,8 +62,15 @@ html, body {
   height: 100%; }
 
 body {
-  position: relative;
+  position: relative; }
+
+html {
   background-color: #000; }
+
+/* Addon Classes */
+.no-lr {
+  padding-left: 0;
+  padding-right: 0; }
 
 /* Layout */
 #master {
@@ -127,7 +134,7 @@ body {
 /* Background
 -------------------------------------
 */
-#gradient {
+body {
   background: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 3%, rgba(255, 255, 255, 0.5) 41%, rgba(255, 255, 255, 0.7) 77%, rgba(255, 255, 255, 0.7) 100%);
   background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(255, 255, 255, 0.8)), color-stop(3%, rgba(255, 255, 255, 0.8)), color-stop(41%, rgba(255, 255, 255, 0.5)), color-stop(77%, rgba(255, 255, 255, 0.7)), color-stop(100%, rgba(255, 255, 255, 0.7)));
   background: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 3%, rgba(255, 255, 255, 0.5) 41%, rgba(255, 255, 255, 0.7) 77%, rgba(255, 255, 255, 0.7) 100%);
@@ -166,24 +173,23 @@ input[type=button], input[type=submit] {
   border: 0;
   background-color: transparent; }
 
-/* Globals */
+/* Addon Classes */
 .no-pad {
   padding-left: 0;
   padding-right: 0;
   margin-left: 0;
   margin-right: 0; }
 
-/* UI Elements */
 /*-------------------
 	Site Styling	
 -------------------*/
 /* Structure */
-#master {
+.container-fluid {
   padding-top: 15px; }
 
 /* Alien Kitty */
 #intro-kitty {
-  margin: 50px 0 20px 0; }
+  margin-bottom: 10px; }
   #intro-kitty .bubble-info, #intro-kitty .bubble-git {
     max-width: 180px;
     cursor: default;
@@ -193,6 +199,14 @@ input[type=button], input[type=submit] {
       -moz-border-radius: 15px;
       border-radius: 15px;
       padding: 15px; }
+  #intro-kitty .bubble-git:hover .content-box.black, #intro-kitty .bubble-git:active .content-box.black, #intro-kitty .bubble-info:hover .content-box.black, #intro-kitty .bubble-info:active .content-box.black {
+    border: 1px solid #fff;
+    background-color: rgba(255, 255, 255, 0.77);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.42);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.42);
+    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.42); }
+  #intro-kitty .bubble-git:hover *, #intro-kitty .bubble-git:active *, #intro-kitty .bubble-info:hover *, #intro-kitty .bubble-info:active * {
+    color: #000; }
   #intro-kitty .bubble-git {
     cursor: pointer;
     position: relative;
@@ -268,14 +282,14 @@ input[type=button], input[type=submit] {
 #alien-kitty.shift {
   margin-top: -30px; }
 
-#kitty-inside {
+.kitty-inside {
   position: relative;
   display: inline-block;
   width: 25px;
   height: 25px;
   margin-left: -35px; }
 
-#kitty-inside #alien-kitty {
+.kitty-inside #alien-kitty {
   position: absolute;
   top: 0;
   left: 0;
@@ -284,28 +298,46 @@ input[type=button], input[type=submit] {
   margin: 0; }
 
 /* Navigation */
-#slide-nav .content-box {
-  -webkit-transition: margin 0.5s ease;
-  -moz-transition: margin 0.5s ease;
-  -o-transition: margin 0.5s ease;
-  transition: margin 0.5s ease;
-  padding: 15px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
-  display: inline-block;
-  margin: 0 auto 10px auto; }
-#slide-nav .content-box.white {
-  border: 0; }
-#slide-nav h1 {
-  text-align: center;
-  vertical-align: middle; }
+#slide-nav {
+  margin-bottom: 30px; }
+  #slide-nav #slide-buttons {
+    display: table;
+    margin: 0 auto; }
+  #slide-nav .content-box {
+    padding: 10px 25px; }
+  #slide-nav .button {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px; }
+  #slide-nav .button:hover .content-box.white, #slide-nav .button:active .content-box.white, #slide-nav .button.active .content-box.white {
+    border: 1px solid #000;
+    background-color: rgba(0, 0, 0, 0.77);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.42);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.42);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.42); }
+    #slide-nav .button:hover .content-box.white *, #slide-nav .button:active .content-box.white *, #slide-nav .button.active .content-box.white * {
+      color: #fff; }
+  #slide-nav h1 {
+    text-align: center;
+    vertical-align: middle; }
+  #slide-nav .current {
+    dispay: block;
+    width: 95%;
+    margin-left: 5%; }
 
-#slide-nav.morph .content-box {
+#slide-nav.up .content-box {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease; }
+
+#content .page {
+  display: none; }
+
+#introduction img {
+  display: table;
+  margin: 0 auto;
+  max-width: 100%; }
 
 /* Grab Media Queries */
 /* responsive.scss */
@@ -358,6 +390,24 @@ input[type=button], input[type=submit] {
 /* Slide Nav
 -------------------------------------
 */
+@media (max-width: 890px) {
+  #slide-nav .content-box {
+    padding: 8px 12px; }
+  #slide-nav h1 {
+    font-size: 150%; }
+  #slide-nav #slide-buttons {
+    padding-left: 60px; } }
+@media (max-width: 767px) {
+  #slide-nav #slide-buttons {
+    padding-left: 0; } }
+@media (max-width: 550px) {
+  #slide-nav .content-box {
+    padding: 10px 15px; }
+  #slide-nav .button {
+    padding-left: 5%;
+    width: 95%; }
+  #slide-nav h1 {
+    font-size: 180%; } }
 @media (max-width: 349px) {
   #slide-nav h1 {
     font-size: 140%; } }

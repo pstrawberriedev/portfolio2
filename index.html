@@ -39,56 +39,108 @@
 				</div>
 				<div class="col-sm-3 hidden-xs">
 					<div class="bubble-git">
-						<a href="https://www.github.com/pstrawberriedev/portfolio" target="_blank">
-							<div class="content-box white">
-								Click here to visit the repo on github
+						<a href="https://www.github.com/pstrawberriedev/portfolio2" target="_blank">
+							<div class="content-box black">
+                                Click here to visit the repo on GitHub
 							</div>
 							<div class="thought-bubbles-git">
-								<div class="bubble-first content-box white"></div>
-								<div class="bubble-second content-box white"></div>
-								<div class="bubble-third content-box white"></div>
+								<div class="bubble-first content-box black"></div>
+								<div class="bubble-second content-box black"></div>
+								<div class="bubble-third content-box black"></div>
 							</div>
 						</a>
 					</div>
 				</div>
 			</div>
 		</div>
+        
 		<div class="row">
 			<div id="slide-nav" class="clearfix">
-				<div class="col-xs-12">
+				<div class="col-xs-12 no-lr">
 					<div id="slide-buttons">
-						<a href="#introduction" id="#introduction">
+						<div id="introduction" class="button">
 							<div class="content-box white">
-								<h1>
-									<div id="kitty-inside"></div>
-									Introduction
-								</h1>
+                                <h1>Introduction</h1>
 							</div>
-						</a>
-						<a href="#skills" id="skills">
-							<div class="content-box black">
+						</div>
+						<div id="skills"  class="button">
+							<div class="content-box white">
 								<h1>Skills</h1>
 							</div>
-						</a>
-						<a href="#work" id="work">
+						</div>
+						<div id="work"  class="button">
 							<div class="content-box white">
 								<h1>Work</h1>
 							</div>
-						</a>
-						<a href="#about" id="about">
-							<div class="content-box black">
+						</div>
+						<div id="about"  class="button">
+							<div class="content-box white">
 								<h1>About</h1>
 							</div>
-						</a>
+						</div>
+                        <div id="current" class="clearfix">
+                            
+                        </div>
 					</div>
 				</div>
 			</div>
 		</div>
+        
+        <div id="content">
+            <div class="row">
+                <div id="introduction" class="page">
+                    <div class="col-xs-6 col-sm-3 col-sm-offset-2">
+                        <div class="intro-pic content-box white">
+                            <img src="images/josh.webp?v=2">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-5">
+                        <div class="content-box white">
+                        Hello. I'm Josh, and this is my portfolio web site. There's a cute little alien kitty, even!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div id="skills" class="page">
+                    <div class="col-xs-12 col-sm-5">
+                        <div class="content-box white">
+                        Skills!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div id="work" class="page">
+                    <div class="col-xs-12 col-sm-5">
+                        <div class="content-box white">
+                            WORK WORK WORK WORK WORK WORK WORK WORK
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div id="about" class="page">
+                    <div class="col-xs-12 col-sm-5">
+                        <div class="content-box white">
+                            ABOUT MEEEEEEEEE WOWOWOOWOWOWOW
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
 	</div>
+
 	
 	<!-- Footer -->
 	<div id="foot" class="container-fluid">
 		<div class="row">
+                <div id="introduction"
 			<div class="col-xs-12">
 				
 			</div>
@@ -96,12 +148,12 @@
 	</div>
 	
 	<!-- Background Elements -->
-	<div id="gradient"></div>
 	<div id="feathers"></div>
 	<div id="smoke"></div>
 	
 	<!--Javascript-->
 	<script src="js/lib/jquery-1.11.1.min.js"></script>
+    <script src="js/lib/jquery-ui.min.js"></script>
     <script src="js/lib/bootstrap.min.js"></script>
 	<script src="js/base.js"></script>
   </body>

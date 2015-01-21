@@ -103,7 +103,11 @@ a, span {font-family:inherit; color:inherit;}
 a, a:link, a:visited, a:hover, a:active {color:inherit; text-decoration:none; outline:0;}
 body {font-family:$body-font; color:$font;}
 html, body {width:100%; height:100%;}
-body {position:relative; background-color:#000;}
+body {position:relative;}
+html {background-color:#000;}
+
+/* Addon Classes */
+.no-lr {padding-left:0; padding-right:0;}
 
 /* Layout */
 #master {position:relative; z-index:3000;}
