@@ -1,0 +1,18 @@
+"Looking for" fake function box ==
+background-color: rgba(0,0,0,.1);
+
+
+
+Intro Buttons Border radius ==
+@include border-radius(6px);
+
+
+
+Skills Colors ==
+$blue: #5eacef;
+$pink: #ef5ecf;
+$green: #15c235;
+$red: #e5314b;
+$orange: #db6b10;
+$skills-grey: #9c9793;
+
