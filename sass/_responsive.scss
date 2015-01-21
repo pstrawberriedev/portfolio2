@@ -54,3 +54,21 @@
 }
 
 @media (max-width:349px) {#slide-nav h1{font-size:140%;}}
+
+
+/* intro
+-------------------------------------
+*/
+@media (min-width:982px) and (max-width:1080px) {
+    #content {
+            #introduction {
+                    #intro-skills {
+                            .content-box.black {
+                                font-size:72%;
+                            }
+                    }
+
+            }
+    }
+    .codebox-grey {font-size:72%;}
+}

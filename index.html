@@ -58,7 +58,7 @@
 			<div id="slide-nav" class="clearfix">
 				<div class="col-xs-12 no-lr">
 					<div id="slide-buttons">
-						<div id="introduction" class="button">
+						<div id="introduction" class="button active">
 							<div class="content-box white">
                                 <h1>Introduction</h1>
 							</div>
@@ -88,15 +88,15 @@
         
         <div id="content">
             <div class="row">
-                <div id="introduction" class="page">
+                <div id="introduction" class="page clearfix">
                     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-                        <div id="intro-location" class="col-sm-4">
+                        <div id="intro-location" class="col-md-4 col-sm-6">
                             <div class="content-box white main">
                                 <h4>I'm located just outside of Denver, CO</h4>
                                 <div class="map"></div>
                             </div>
                         </div>
-                        <div id="intro-skills" class="col-sm-4">
+                        <div id="intro-skills" class="col-md-4 col-sm-6">
                             <div class="content-box white main">
                                 <div class="col-xs-12">
                                     <h4>I'm a front-end web developer with a design background</h4>
@@ -123,15 +123,15 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="intro-looking" class="col-sm-4">
+                        <div id="intro-looking" class="col-md-4 col-sm-12">
                             <div class="content-box white main">
                                 <h4>I'm seeking a lovely team to work with</h4>
                                 <div class="codebox-grey">
-                                &nbsp;&nbsp;if(hasJob == "true") {<br />
-                                &nbsp;&nbsp;&nbsp;&nbsp;console.log("Chinese food");<br />
-                                &nbsp;&nbsp;} else {<br />
-                                &nbsp;&nbsp;&nbsp;&nbsp;console.log("Ramen noodles");<br />
-                                &nbsp;&nbsp;}
+                                    &nbsp;&nbsp;if($("#me").hasClass("job")) {<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;console.log("Chinese food");<br />
+                                    &nbsp;&nbsp;} else {<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;console.log("Ramen noodles");<br />
+                                    &nbsp;&nbsp;}
                                 </div>
                             </div>
                         </div>
@@ -187,6 +187,7 @@
 	<!-- Background Elements -->
 	<div id="feathers"></div>
 	<div id="smoke"></div>
+    <div id="me" class=""></div>
 	
 	<!--Javascript-->
 	<script src="js/lib/jquery-1.11.1.min.js"></script>

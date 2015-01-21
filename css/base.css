@@ -58,7 +58,8 @@ body {
   color: #343434; }
 
 html, body {
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
 
 body {
   position: relative; }
@@ -357,9 +358,11 @@ input[type=button], input[type=submit] {
     font-family: Consolas, monaco, monospace;
     font-size: 90%; }
   #content #introduction #intro-skills .button {
+    cursor: default;
     margin-bottom: 10px; }
 
 .codebox-grey {
+  overflow: auto;
   font-family: Consolas, monaco, monospace;
   width: 100%;
   padding: 10px;
@@ -439,5 +442,14 @@ input[type=button], input[type=submit] {
 @media (max-width: 349px) {
   #slide-nav h1 {
     font-size: 140%; } }
+/* intro
+-------------------------------------
+*/
+@media (min-width: 982px) and (max-width: 1080px) {
+  #content #introduction #intro-skills .content-box.black {
+    font-size: 72%; }
+
+  .codebox-grey {
+    font-size: 72%; } }
 
 /*# sourceMappingURL=base.css.map */

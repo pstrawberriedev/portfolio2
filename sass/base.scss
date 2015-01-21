@@ -162,6 +162,7 @@
                             font-size:90%;
                         }
                         .button {
+                            cursor:default;
                             margin-bottom:10px;
                         }
                 }
@@ -169,6 +170,7 @@
         }
 }
 .codebox-grey { //put me in a column
+    overflow:auto;
     font-family: Consolas, monaco, monospace;
     width:100%;
     padding:10px;
