@@ -58,19 +58,13 @@ body {
   color: #343434; }
 
 html, body {
-  width: 100%;
-  height: 100%; }
+  width: 100%; }
 
 body {
   position: relative; }
 
 html {
   background-color: #000; }
-
-/* Addon Classes */
-.no-lr {
-  padding-left: 0;
-  padding-right: 0; }
 
 /* Layout */
 #master {
@@ -116,8 +110,6 @@ html {
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.42);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.42);
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.42); }
-  .content-box.black * {
-    color: #fff; }
 
 .content-box.white {
   background-color: rgba(255, 255, 255, 0.77);
@@ -126,8 +118,17 @@ html {
   -webkit-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.42);
   -moz-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.42);
   box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.42); }
-  .content-box.white * {
-    color: #000; }
+
+/* Addon Classes */
+.no-lr {
+  padding-left: 0;
+  padding-right: 0; }
+
+.white-txt * {
+  color: #fff; }
+
+.black-txt * {
+  color: #000; }
 
 /* Imports */
 /* gradient.scss */
@@ -333,11 +334,38 @@ input[type=button], input[type=submit] {
 
 #content .page {
   display: none; }
+#content #introduction {
+  display: block; }
+  #content #introduction h4 {
+    margin-bottom: 10px; }
+  #content #introduction .main {
+    min-height: 200px; }
+  #content #introduction #intro-location, #content #introduction #intro-skills, #content #introduction #intro-looking {
+    margin-bottom: 20px; }
+  #content #introduction #intro-location .map {
+    background: transparent url("../images/location.png") no-repeat left bottom;
+    max-width: 100%;
+    height: 121px; }
+  #content #introduction #intro-location .map:hover, #content #introduction #intro-location img.map:active {
+    background-image: url("../images/location2.png"); }
+  #content #introduction #intro-skills .content-box.black {
+    text-align: center;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    color: #fff;
+    font-family: Consolas, monaco, monospace;
+    font-size: 90%; }
+  #content #introduction #intro-skills .button {
+    margin-bottom: 10px; }
 
-#introduction img {
-  display: table;
-  margin: 0 auto;
-  max-width: 100%; }
+.codebox-grey {
+  font-family: Consolas, monaco, monospace;
+  width: 100%;
+  padding: 10px;
+  color: #666;
+  background-color: rgba(0, 0, 0, 0.1);
+  font-size: 84%; }
 
 /* Grab Media Queries */
 /* responsive.scss */

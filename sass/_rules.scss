@@ -82,6 +82,12 @@ $simple-font: Arial, 'Helvetica Neue', Helvetica, sans-serif;
 /* Colors */
 $font: #343434;
 $yellow: #f3f94f;
+$blue: #5eacef;
+$pink: #ef5ecf;
+$green: #15c235;
+$red: #e5314b;
+$orange: #db6b10;
+$skills-grey: #9c9793;
 
 
 /* Font Color classes */
@@ -102,12 +108,9 @@ p {margin:0; padding:0;}
 a, span {font-family:inherit; color:inherit;}
 a, a:link, a:visited, a:hover, a:active {color:inherit; text-decoration:none; outline:0;}
 body {font-family:$body-font; color:$font;}
-html, body {width:100%; height:100%;}
+html, body {width:100%;}
 body {position:relative;}
 html {background-color:#000;}
-
-/* Addon Classes */
-.no-lr {padding-left:0; padding-right:0;}
 
 /* Layout */
 #master {position:relative; z-index:3000;}
@@ -139,19 +142,18 @@ html {background-color:#000;}
 	background-color:rgba(0,0,0,.77);
 	color:#fff;
 	@include box-shadow(0px 0px 5px 0px rgba(0, 0, 0, 0.42));
-		* {
-			color:#fff;
-		}
 }
 .content-box.white {
 	background-color:rgba(255,255,255,.77);
 	border: 1px solid #efefef;
 	color:#000;
 	@include box-shadow(0px 0px 5px 0px rgba(255, 255, 255, 0.42));
-		* {
-			color:#000;
-		}
 }
+
+/* Addon Classes */
+.no-lr {padding-left:0; padding-right:0;}
+.white-txt {*{color:#fff;}}
+.black-txt {*{color:#000;}}
 
 /* Imports */
 @import 'gradient';
