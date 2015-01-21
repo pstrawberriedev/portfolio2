@@ -1,5 +1,5 @@
 //-------------------------
-//	Alien Kitty
+//	Navigation
 //-------------------------
 
 $("#slide-nav .button").each(function() {
@@ -15,22 +15,15 @@ $("#slide-nav .button").each(function() {
         $("#slide-nav .button").removeClass("active");
         if($(this).attr('id') != "introduction") { intro.slideUp(); } 
         else { intro.slideDown(); }
-        
         if(! $(this).hasClass("active")) {$(this).addClass("active");}
         
-        if(currentPage.is(':visible')) {
-            return;
-        }
-         else {
-            $("#content .page").hide(function() {
+        if(currentPage.attr('id') == currentID) { return; }
+        else {
+            $("#content .page").not(currentID).hide(function() {
                 currentPage.slideDown();
             });
-        }
-        
-        
+        } 
     });
-	
-	
 });
 
 //-------------------------
