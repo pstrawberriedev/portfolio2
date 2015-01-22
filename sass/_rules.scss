@@ -75,6 +75,7 @@
 $title-font: 'Electrolize', Arial, 'Helvetica Neue', Helvetica, sans-serif;
 $body-font: 'Abel', Arial, 'Helvetica Neue', Helvetica, sans-serif;
 $simple-font: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$code: Consolas, monaco, monospace;
 .title {font-family: $title-font;}
 .body {font-family: $body-font;}
 .simple {font-family: $simple-font;}
@@ -124,13 +125,18 @@ html {background-color:#000;}
 	left:0;
 	right:0;
 }
+#blk{
+	z-index:1000;
+	position:fixed; width:100%; height:100%; bottom:0; left:0;
+	background-color:#000;
+}
 #smoke{
-	position:absolute; width:100%; height:100%; bottom:0; left:0;
-	background:transparent url("../images/bg_smoke.png") repeat-x center bottom;
+	//position:absolute; width:100%; height:100%; bottom:0; left:0;
+	//background:transparent url("../images/bg_smoke.png") repeat-x center bottom;
 }
 #feathers{
-	position:absolute; width:100%; height:100%; bottom:0; left:0;
-	background:transparent url("../images/bg_boxes.jpg") repeat center top;
+	//position:absolute; width:100%; height:100%; bottom:0; left:0;
+	//background:transparent url("../images/bg_boxes.jpg") repeat center top;
 }
 
 /* Content Boxes */
@@ -152,8 +158,7 @@ html {background-color:#000;}
 
 /* Addon Classes */
 .no-lr {padding-left:0; padding-right:0;}
-.white-txt {*{color:#fff;}}
-.black-txt {*{color:#000;}}
+.content-box.no-side {border-left:0; border-right:0; @include box-shadow(none);}
 
 /* Imports */
 @import 'gradient';

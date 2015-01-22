@@ -72,3 +72,19 @@
     }
     .codebox-grey {font-size:72%;}
 }
+
+@media (max-width:992px) {
+	#content #skills .info {margin-bottom:5px;}
+}
+@media (max-width:767px) {
+	#skills .wrap.no-lr {padding-left:15px; padding-right:15px;}
+}
+
+@media (min-width:992px) and (max-width:1350px) {
+	#content {
+			#skills {
+					.photoshop h4.title {padding-top:3px;}
+					.photoshop h4 span.sym {display:none;}
+			}
+	}
+}

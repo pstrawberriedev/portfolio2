@@ -138,6 +138,8 @@
 //Main content area
 #content {
         .page {display:none;}
+		
+		//Introduction page
         #introduction {
             display:block;
                 h4 {margin-bottom:10px;}
@@ -158,7 +160,7 @@
                             text-align:center;
                             @include border-radius(6px); 
                             color:#fff;
-                            font-family: Consolas, monaco, monospace;
+                            font-family: $code;
                             font-size:90%;
                         }
                         .button {
@@ -166,12 +168,43 @@
                             margin-bottom:10px;
                         }
                 }
+				* {cursor:default;}
                 
         }
+		
+		//Skills page
+		#skills {
+				#technical {margin-bottom:30px;}
+				.main {
+					padding-top:0;
+					padding-left:0;
+				}
+				.info {min-height:130px;}
+				.info.content-box.black {@include box-shadow(none);}
+				.info .block {padding-top:10px;}
+				
+				.category {min-height:45px;}
+				.category h4 span{font-size:115%; font-weight:100;}
+				h4 {font-family:$body-font;}
+				h4 span {font-family: $code;}
+				
+				.html h4 span {color:$blue;}
+				.css h4 span {color:$pink;}
+				.jquery h4 span {color:$green;}
+				.php h4 span {color:$red;}
+				.photoshop h4 span {color:$orange;}
+				.additional h4 span {color:$skills-grey;}
+				
+				#professional .category h4 {padding-top:3px;}
+				#professional .block h4 {text-transform:none; margin-bottom:8px;}
+				
+				*{cursor:default;}
+				
+		}
 }
 .codebox-grey { //put me in a column
     overflow:auto;
-    font-family: Consolas, monaco, monospace;
+    font-family: $code;
     width:100%;
     padding:10px;
     color:#666;
