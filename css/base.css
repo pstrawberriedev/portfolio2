@@ -344,7 +344,7 @@ input[type=button], input[type=submit] {
   #content #introduction #intro-location, #content #introduction #intro-skills, #content #introduction #intro-looking {
     margin-bottom: 20px; }
   #content #introduction #intro-location .map {
-    background: transparent url("../images/location.png") no-repeat left bottom;
+    background: transparent url("../images/location.png") no-repeat center center;
     max-width: 100%;
     height: 121px; }
   #content #introduction #intro-location .map:hover, #content #introduction #intro-location img.map:active {
