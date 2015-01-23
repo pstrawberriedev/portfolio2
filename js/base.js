@@ -4,12 +4,14 @@
 
 $("#slide-nav .button").each(function() {
 
-        var intro = $("#intro-kitty");
-        var nav = $("#slide-buttons");
-        var bubbles = $("#intro-kitty .bubble-git, #intro-kitty .bubble-info");
-        var currentID ="#" + $(this).attr('id');
-        var currentPage = $("#content").find(currentID);
+	// Define
+	var intro = $("#intro-kitty");
+	var nav = $("#slide-buttons");
+	var bubbles = $("#intro-kitty .bubble-git, #intro-kitty .bubble-info");
+	var currentID ="#" + $(this).attr('id');
+	var currentPage = $("#content").find(currentID);
 
+	// Nav button click
     $(this).click(function() {
         $("#slide-nav .button").removeClass("active");
         if($(this).attr('id') != "introduction") {
@@ -28,9 +30,6 @@ $("#slide-nav .button").each(function() {
             function pageIn() {
                 TweenLite.to(currentPage, .4, {autoAlpha:1, display:"block"});
             }
-            //$("#content .page").not(currentID).hide(function() {
-                //currentPage.slideDown();
-            //});
         }
     });
 });
@@ -38,8 +37,3 @@ $("#slide-nav .button").each(function() {
 //-------------------------
 //	Carousel
 //-------------------------
-/*
-TweenLite.to(intro, 1.5, {height:0, delay:0.5, onComplete:myFunction});
-function myFunction() {
-    console.log("tween finished");
-}*/
