@@ -332,6 +332,8 @@ https://github.com/samuelgbrown/jquery.circular-carousel
     color: #fff;
     font-family: Consolas, monaco, monospace;
     font-size: 90%; }
+  #content #introduction #intro-skills .buttons {
+    padding-top: 60px; }
   #content #introduction #intro-skills .button {
     cursor: default;
     margin-bottom: 10px; }
