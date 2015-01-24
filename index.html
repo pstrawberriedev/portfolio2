@@ -20,7 +20,7 @@
 	<div id="master" class="container-fluid">
 		<div class="row">
 			<div id="intro-kitty" class="clearfix">
-				<div class="col-sm-5">
+				<div class="col-sm-5 hidden-xs">
 					<div class="clearfix">
 						<div class="bubble-info">
 							<div class="content-box black">
@@ -34,8 +34,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-2">
+				<div class="col-xs-12 col-sm-2">
 					<div id="alien-kitty"></div>
+                    <h1 class="xs-title hidden-sm hidden-md hidden-lg">Josh DePaolo</h1>
 				</div>
 				<div class="col-sm-3 hidden-xs">
 					<div class="bubble-git">
@@ -56,28 +57,41 @@
         
 		<div class="row">
 			<div id="slide-nav" class="clearfix">
-				<div class="col-xs-12 col-sm-10 col-sm-offset-1 no-lr">
+                <div id="mobile" class="col-xs-12 hidden-sm hidden-md hidden-lg up">
+                    <div class="content-box white">
+                        <h1>Tap to navigate</h1>
+                    </div>
+                </div>
+				<div class="col-xs-12">
 					<div id="slide-buttons">
-						<div id="introduction" class="button active">
-							<div class="content-box white">
-								<h1>Introduction</h1>
-							</div>
-						</div>
-						<div id="skills"  class="button">
-							<div class="content-box white">
-								<h1>Skills</h1>
-							</div>
-						</div>
-						<div id="work"  class="button">
-							<div class="content-box white">
-								<h1>Work</h1>
-							</div>
-						</div>
-						<div id="about"  class="button">
-							<div class="content-box white">
-								<h1>About</h1>
-							</div>
-						</div>
+                        <div class="col-sm-3 no-lr">
+                            <div id="introduction" class="button active">
+                                <div class="content-box white">
+                                    <h1>Intro</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 no-lr">
+                            <div id="skills"  class="button">
+                                <div class="content-box white">
+                                    <h1>Skills</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 no-lr">
+                            <div id="work"  class="button">
+                                <div class="content-box white">
+                                    <h1>Work</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 no-lr">
+                            <div id="about"  class="button">
+                                <div class="content-box white">
+                                    <h1>About</h1>
+                                </div>
+                            </div>
+                        </div>
 					</div>
 				</div>
 			</div>
@@ -86,7 +100,7 @@
         <div id="content">
             <div class="row">
                 <div id="introduction" class="page clearfix">
-                    <div class="col-xs-12 col-sm-10 col-sm-offset-1 no-lr">
+                    <div class="col-xs-12 no-lr">
                         <div id="intro-location" class="col-md-4 col-sm-6">
                             <div class="content-box white main">
                                 <h4>I'm located just outside of Denver, CO</h4>
@@ -140,7 +154,7 @@
             
             <div class="row">
                 <div id="skills" class="page">
-                    <div class="col-xs-12 col-sm-10 col-sm-offset-1 wrap no-lr">
+                    <div class="col-xs-12">
 						<div id="technical" class="clearfix">
 							<div class="col-sm-3 col-xs-6 content-box black title">
 								<h5>Technical</h5>
@@ -332,6 +346,7 @@
 	</div>
 	
 	<!-- Background Elements -->
+    <div id="trigger"></div>
 	<div id="grad"></div>
 	<div id="blk"></div>
     <div id="me" class=""></div>

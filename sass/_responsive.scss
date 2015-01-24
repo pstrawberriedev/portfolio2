@@ -1,25 +1,50 @@
 /* responsive.scss */
 
+/* JS Class triggers
+-------------------------------------
+*/
+#trigger {height:1px; width:3px; position:absolute; bottom:0; right:0; background-color:transparent;}
+@media (max-width:767px) { #trigger {width:2px;} }
+@media (max-width:550px) { #trigger {width:1px;} }
+@media (max-width:321px) { #trigger {width:0px;} }
 
-/* Alien Kitty Intro
+/* Alien Kitty
 -------------------------------------
 */
 @media (max-width:767px) {
 	#intro-kitty {
+        margin-bottom:5px;
 			.bubble-info {
-				float:none;
+                float:left;
 				position:relative;
-				margin:0 auto;
 			}
 			.thought-bubbles-info {
 			position:absolute;
-			left:28px;
-			bottom:-26px;
-				.bubble-first {bottom:-18px; left:57px}
-				.bubble-second {bottom:-8px; left:59px; width:10px; height:10px;}
-				.bubble-third {bottom:6px; left:60px; width:15px; height:15px;}
+			left:0;
+			bottom:0;
+				.bubble-first {bottom:10px; left:-36px}
+				.bubble-second {bottom:18px; left:-28px; width:10px; height:10px;}
+				.bubble-third {bottom:28px; left:-18px; width:15px; height:15px;}
 		}
+        .xs-title {
+            color:#fff;
+            vertical-align:top;
+            padding-top:7px;
+            float:left;
+            text-shadow: 0px 1px 1px rgba(0, 0, 0, 1);
+        }
+        
 	}
+    #alien-kitty {
+        float:left;
+        width:88px;
+        height:52px;
+        @include background-size(contain);
+        margin: 0;   
+    }
+}
+@media (max-width:405px) {
+    #intro-kitty .xs-title {font-size:180%; padding-top:13px;}
 }
 // git box scaling
 @media (max-width:1190px) {#intro-kitty .bubble-git{left:15px;}}
@@ -37,18 +62,18 @@
     #slide-nav {
             .content-box {padding:8px 12px;}
             h1 {font-size:150%;}
-            #slide-buttons {padding-left:60px;}
     }
 }
 @media (max-width:767px) {
     #slide-nav {
             #slide-buttons {padding-left:0;}
+            .button {height:0; overflow:hidden;}
+            #mobile {cursor:pointer;}
+            .content-box {height:100%; padding-top:12px;}
     }
 }
 @media (max-width:550px) {
     #slide-nav {
-            .content-box {padding:10px 15px;}
-            .button { padding-left:5%; width:95%;}
             h1 {font-size:180%;}
     }
 }

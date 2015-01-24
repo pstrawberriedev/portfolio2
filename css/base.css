@@ -256,36 +256,13 @@ https://github.com/samuelgbrown/jquery.circular-carousel
   background-size: contain;
   z-index: 5000; }
 
-#alien-kitty.shift {
-  margin-top: -30px; }
-
-.kitty-inside {
-  position: relative;
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  margin-left: -35px; }
-
-.kitty-inside #alien-kitty {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  margin: 0; }
-
 /* Navigation */
 #slide-nav {
   margin-bottom: 30px; }
-  #slide-nav #slide-buttons {
-    display: table;
-    margin: 0 auto; }
   #slide-nav .content-box {
     padding: 10px 25px; }
   #slide-nav .button {
-    display: inline-block;
-    cursor: pointer;
-    margin-right: 10px; }
+    cursor: pointer; }
   #slide-nav .button:hover .content-box.white, #slide-nav .button:active .content-box.white, #slide-nav .button.active .content-box.white {
     border: 1px solid #000;
     background-color: rgba(0, 0, 0, 0.77);
@@ -297,16 +274,6 @@ https://github.com/samuelgbrown/jquery.circular-carousel
   #slide-nav h1 {
     text-align: center;
     vertical-align: middle; }
-  #slide-nav .current {
-    dispay: block;
-    width: 95%;
-    margin-left: 5%; }
-
-#slide-nav.up .content-box {
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
 
 #content .page {
   display: none; }
@@ -392,31 +359,72 @@ https://github.com/samuelgbrown/jquery.circular-carousel
 
 /* Grab Media Queries */
 /* responsive.scss */
-/* Alien Kitty Intro
+/* JS Class triggers
+-------------------------------------
+*/
+#trigger {
+  height: 1px;
+  width: 3px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: transparent; }
+
+@media (max-width: 767px) {
+  #trigger {
+    width: 2px; } }
+@media (max-width: 550px) {
+  #trigger {
+    width: 1px; } }
+@media (max-width: 321px) {
+  #trigger {
+    width: 0px; } }
+/* Alien Kitty
 -------------------------------------
 */
 @media (max-width: 767px) {
-  #intro-kitty .bubble-info {
-    float: none;
-    position: relative;
-    margin: 0 auto; }
-  #intro-kitty .thought-bubbles-info {
-    position: absolute;
-    left: 28px;
-    bottom: -26px; }
-    #intro-kitty .thought-bubbles-info .bubble-first {
-      bottom: -18px;
-      left: 57px; }
-    #intro-kitty .thought-bubbles-info .bubble-second {
-      bottom: -8px;
-      left: 59px;
-      width: 10px;
-      height: 10px; }
-    #intro-kitty .thought-bubbles-info .bubble-third {
-      bottom: 6px;
-      left: 60px;
-      width: 15px;
-      height: 15px; } }
+  #intro-kitty {
+    margin-bottom: 5px; }
+    #intro-kitty .bubble-info {
+      float: left;
+      position: relative; }
+    #intro-kitty .thought-bubbles-info {
+      position: absolute;
+      left: 0;
+      bottom: 0; }
+      #intro-kitty .thought-bubbles-info .bubble-first {
+        bottom: 10px;
+        left: -36px; }
+      #intro-kitty .thought-bubbles-info .bubble-second {
+        bottom: 18px;
+        left: -28px;
+        width: 10px;
+        height: 10px; }
+      #intro-kitty .thought-bubbles-info .bubble-third {
+        bottom: 28px;
+        left: -18px;
+        width: 15px;
+        height: 15px; }
+    #intro-kitty .xs-title {
+      color: #fff;
+      vertical-align: top;
+      padding-top: 7px;
+      float: left;
+      text-shadow: 0px 1px 1px black; }
+
+  #alien-kitty {
+    float: left;
+    width: 88px;
+    height: 52px;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    margin: 0; } }
+@media (max-width: 405px) {
+  #intro-kitty .xs-title {
+    font-size: 180%;
+    padding-top: 13px; } }
 @media (max-width: 1190px) {
   #intro-kitty .bubble-git {
     left: 15px; } }
@@ -445,18 +453,19 @@ https://github.com/samuelgbrown/jquery.circular-carousel
   #slide-nav .content-box {
     padding: 8px 12px; }
   #slide-nav h1 {
-    font-size: 150%; }
-  #slide-nav #slide-buttons {
-    padding-left: 60px; } }
+    font-size: 150%; } }
 @media (max-width: 767px) {
   #slide-nav #slide-buttons {
-    padding-left: 0; } }
-@media (max-width: 550px) {
-  #slide-nav .content-box {
-    padding: 10px 15px; }
+    padding-left: 0; }
   #slide-nav .button {
-    padding-left: 5%;
-    width: 95%; }
+    height: 0;
+    overflow: hidden; }
+  #slide-nav #mobile {
+    cursor: pointer; }
+  #slide-nav .content-box {
+    height: 100%;
+    padding-top: 12px; } }
+@media (max-width: 550px) {
   #slide-nav h1 {
     font-size: 180%; } }
 @media (max-width: 349px) {
