@@ -1,2 +1,3 @@
 # Portfolio 2
-#### The Second Version of my Portfolio!
+---
+![alt text](https://raw.githubusercontent.com/pstrawberriedev/portfolio2/master/images/alien_kitty.png "Alien kitty")
