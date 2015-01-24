@@ -260,6 +260,8 @@ html {
     background-color: transparent;
     border: none;
     border-radius: 0; }
+  #content #work #carousel .carousel-indicators a li {
+    cursor: pointer; }
   #content #work #carousel .carousel-indicators li.info {
     display: none; }
   #content #work #carousel .carousel-indicators li.info.active {
