@@ -103,5 +103,27 @@ $("#slide-nav .button").click(function() {
 });
 
 //-------------------------
-//	Carousel
+//	About Page
 //-------------------------
+
+//curtains
+$("#about .curtains").click(function() {
+    if($(this).hasClass("down")) {
+        $(this).removeClass("down");
+		TweenLite.to($("#about img.toggle"), .7, {y:-205});
+        TweenLite.to($("#about img.me"), .7, {y:0});
+
+		$(this).addClass("up");
+    } else {
+		$(this).removeClass("up");
+		TweenLite.to($("#about img.me"), .7, {y:-205});
+        TweenLite.to($("#about img.toggle"), .7, {y:0});
+		$(this).addClass("down");
+	}
+});
+
+//Bootstrap tooltips
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+

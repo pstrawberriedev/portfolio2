@@ -180,9 +180,27 @@
 				*{cursor:default;}
 		}
 		
-		//Work page
-		#work {
-			//see _carousel.scss
+		//Work page  ==  _carousel.scss
+		
+		//About page
+		#about {
+				
+				.thanks {min-height:230px; margin-bottom:10px;}
+				.more {min-height:210px;}
+				.curtains {
+					position:relative;
+					cursor:pointer;
+					overflow:hidden;
+					width:220px;
+					height:214px;
+				}
+				.curtains img {width:220px; height:204px;}
+				.curtains img.toggle {position:absolute; left:0; top:0; z-index:1100; height:auto;}
+				.curtains img.me {position:absolute; left:0; top:0; height:auto; z-index:1000; @include translate(0,-205px);}
+				h3 {margin-bottom:15px;}
+				p {margin-bottom:12px;}
+				.thanks p {margin-bottom:20px;}
+				ul, ul li {list-style:disc inside none;}
 		}
 }
 .codebox-grey { //put me in a column

@@ -91,4 +91,10 @@
 			border: none;
 			border-radius: 0;
 		}
+		.carousel-indicators li.info {
+			display:none;
+		}
+		.carousel-indicators li.info.active {
+			display:block;
+		}
 }
