@@ -146,10 +146,101 @@ html {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', endColorstr='#b3ffffff',GradientType=1 ); }
 
 /* carousel.scss */
-/* 
-Circular Carousel
-https://github.com/samuelgbrown/jquery.circular-carousel 
-*/
+#content #work #carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+  #content #work #carousel .item-info {
+    margin-bottom: 15px; }
+    #content #work #carousel .item-info .content-box {
+      height: 100px;
+      vertical-align: middle; }
+    #content #work #carousel .item-info .content-box.white {
+      border-left: 0;
+      border-right: 0; }
+  #content #work #carousel h5 {
+    font-family: "Abel", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    position: relative;
+    padding-left: 30px;
+    text-align: left;
+    line-height: 25px; }
+  #content #work #carousel h5:before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    background: transparent url("../images/work_info.png") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain; }
+  #content #work #carousel h5.design:before {
+    background-image: url("../images/work_design.png"); }
+  #content #work #carousel h5.code:before {
+    background-image: url("../images/work_code.png"); }
+  #content #work #carousel h5.live.true, #content #work #carousel h5.live.false {
+    padding-left: 21px; }
+  #content #work #carousel h5.live.true:before {
+    background-image: url("../images/work_live.png");
+    left: -6px; }
+  #content #work #carousel h5.live.false:before {
+    background-image: url("../images/work_live2.png");
+    left: -6px; }
+  #content #work #carousel h4.title {
+    text-align: center;
+    margin-top: 28px;
+    font-family: "Abel", Arial, "Helvetica Neue", Helvetica, sans-serif; }
+  #content #work #carousel ul.info-ul {
+    margin-left: 6px;
+    margin-top: 6px;
+    list-style: disc inside none; }
+    #content #work #carousel ul.info-ul li {
+      font-size: 88%;
+      list-style: disc inside none; }
+  #content #work #carousel ul.live-ul {
+    margin-left: 0; }
+  #content #work #carousel .picture {
+    position: relative;
+    text-align: center; }
+    #content #work #carousel .picture img {
+      max-width: 90%;
+      height: auto; }
+  #content #work #carousel #control-l, #content #work #carousel #control-r {
+    cursor: pointer;
+    z-index: 3000;
+    padding-left: 15px; }
+    #content #work #carousel #control-l img, #content #work #carousel #control-r img {
+      position: relative;
+      margin-top: 64%;
+      max-width: 100%; }
+  #content #work #carousel #control-r {
+    text-align: right;
+    padding-left: 0;
+    padding-right: 15px; }
+  #content #work #carousel .carousel-indicators {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    z-index: 3000;
+    width: 100%;
+    padding-left: 0;
+    margin-left: 0;
+    text-align: left;
+    list-style: disc inside none; }
+  #content #work #carousel .carousel-indicators li {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    text-indent: 0;
+    cursor: default;
+    background-color: transparent;
+    border: none;
+    border-radius: 0; }
+
 /* Addon Classes */
 .no-pad {
   padding-left: 0;
@@ -492,5 +583,14 @@ https://github.com/samuelgbrown/jquery.circular-carousel
     padding-top: 3px; }
   #content #skills .photoshop h4 span.sym {
     display: none; } }
+/* Work
+-------------------------------------
+*/
+@media (max-width: 767px) {
+  #content #work #carousel .item-info .content-box.title-col {
+    height: 55px; }
+  #content #work #carousel h4.title {
+    font-size: 186%;
+    margin-top: 3px; } }
 
 /*# sourceMappingURL=base.css.map */

@@ -1,6 +1,94 @@
 /* carousel.scss */
 
-/* 
-Circular Carousel
-https://github.com/samuelgbrown/jquery.circular-carousel 
-*/
+#content #work #carousel {
+	position:relative;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+		.item-info {
+			margin-bottom:15px;
+				.content-box {
+					height:100px;
+					vertical-align:middle;
+				}
+				.content-box.white {
+					border-left:0;
+					border-right:0;
+				}
+		}
+		h5 {
+			font-family: $body-font;
+			position:relative;
+			padding-left:30px;
+			text-align:left;
+			line-height:25px;
+		}
+		h5:before {
+			content: "";
+			position:absolute;
+			left:2px;
+			top:0;
+			width:24px;
+			height:24px;
+			background:transparent url("../images/work_info.png") no-repeat center center;
+			@include background-size(contain);
+		}
+		
+		h5.design:before {background-image:url("../images/work_design.png");}
+		h5.code:before {background-image:url("../images/work_code.png");}
+		h5.live.true, h5.live.false {padding-left:21px;}
+		h5.live.true:before {background-image:url("../images/work_live.png"); left:-6px;}
+		h5.live.false:before {background-image:url("../images/work_live2.png"); left:-6px;}
+		h4.title {text-align:center; margin-top:28px; font-family: $body-font;}
+		
+		ul.info-ul {
+			margin-left:6px;
+			margin-top:6px;
+			list-style:disc inside none;
+				li {font-size:88%; list-style:disc inside none;}
+		}
+		ul.live-ul {margin-left:0;}
+		
+		.picture {
+			position:relative;
+			text-align:center;
+				img {
+					max-width:90%;
+					height: auto;
+				}
+		}
+		
+		#control-l, #control-r {
+			cursor:pointer;
+			z-index:3000;
+			padding-left:15px;
+				img {
+					position:relative;
+					margin-top:64%;
+					max-width:100%;
+				}
+		}
+		#control-r {text-align:right; padding-left:0; padding-right:15px;}
+		.carousel-indicators {
+			position: relative;
+			bottom: auto;
+			left: auto;
+			z-index: 3000;
+			width: 100%;
+			padding-left: 0;
+			margin-left: 0;
+			text-align: left;
+			list-style: disc inside none;
+		}
+		.carousel-indicators li {
+			display: block;
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			text-indent: 0;
+			cursor: default;
+			background-color: transparent;
+			border: none;
+			border-radius: 0;
+		}
+}

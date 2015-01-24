@@ -113,3 +113,15 @@
 			}
 	}
 }
+
+/* Work
+-------------------------------------
+*/
+@media (max-width:767px) {
+	#content #work #carousel {
+			.item-info .content-box.title-col {
+				height:55px;
+			}
+			h4.title {font-size:186%; margin-top:3px;}
+	}
+}
