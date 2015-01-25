@@ -36,9 +36,9 @@
 		
 		h5.design:before {background-image:url("../images/work_design.png");}
 		h5.code:before {background-image:url("../images/work_code.png");}
-		h5.live.true, h5.live.false {padding-left:21px;}
-		h5.live.true:before {background-image:url("../images/work_live.png"); left:-6px;}
-		h5.live.false:before {background-image:url("../images/work_live2.png"); left:-6px;}
+		h5.live.true, h5.live.false {padding-top:47px; padding-left:0; text-align:center; display:block; line-height:14px;}
+		h5.live.true:before {background-image:url("../images/work_live.png"); top:17px; left:50%; margin-left:-10px;}
+		h5.live.false:before {background-image:url("../images/work_live2.png"); top:17px; left:-6px;}
 		h4.title {text-align:center; margin-top:28px; font-family: $body-font;}
 		
 		ul.info-ul {
@@ -98,4 +98,5 @@
 		.carousel-indicators li.info.active {
 			display:block;
 		}
+        a.full {display:block; width:100%; height:100%}
 }
