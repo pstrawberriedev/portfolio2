@@ -126,7 +126,7 @@
 	}
 }
 
-/* Work
+/* About
 -------------------------------------
 */
 @media (max-width:767px) {
@@ -135,8 +135,9 @@
 			.curtains {text-align:center; margin:0 auto 20px auto;}
 			img.mail {margin-bottom:20px;}
 			h3, p {text-align:center;}
+            ul {display:table; margin:0 auto; width:200px;}
 			li {text-align:left;}
             .contact {text-align:center;}
-            .contact p, .general p, .services p {text-align:left;}
+            .general p, .services p {text-align:left;}
 	}
 }

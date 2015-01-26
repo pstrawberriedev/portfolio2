@@ -668,7 +668,7 @@ html {
   #content #work #carousel h4.title {
     font-size: 186%;
     margin-top: 3px; } }
-/* Work
+/* About
 -------------------------------------
 */
 @media (max-width: 767px) {
@@ -679,11 +679,15 @@ html {
     margin-bottom: 20px; }
   #about h3, #about p {
     text-align: center; }
+  #about ul {
+    display: table;
+    margin: 0 auto;
+    width: 200px; }
   #about li {
     text-align: left; }
   #about .contact {
     text-align: center; }
-  #about .contact p, #about .general p, #about .services p {
+  #about .general p, #about .services p {
     text-align: left; } }
 
 /*# sourceMappingURL=base.css.map */
