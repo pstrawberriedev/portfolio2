@@ -129,8 +129,14 @@
 /* About
 -------------------------------------
 */
+
+@media (max-width:991px) {
+	#content #contact {	
+            .contact p {text-align:center;}
+	}
+}
 @media (max-width:767px) {
-	#about {
+	#contact {
 					
 			.curtains {text-align:center; margin:0 auto 20px auto;}
 			img.mail {margin-bottom:20px;}

@@ -73,10 +73,13 @@ $("#slide-nav .button").each(function() {
         if(currentPage.attr('id') == currentID) { return; }
         else {
             var otherPages = $("#content .page").not(currentID);
-            TweenLite.to(otherPages, .4, {autoAlpha:0, display:"none", onComplete:pageIn});
-            function pageIn() {
-                TweenLite.to(currentPage, .4, {autoAlpha:1, display:"block"});
-            }
+			TweenLite.to(otherPages, .4, {autoAlpha:0, display:"none", onComplete:pageIn});
+				function pageIn() {
+					TweenLite.to(currentPage, .4, {autoAlpha:1, display:"block", onComplete:showPage});
+						function showPage() {
+							TweenLite.to(currentPage, .4, {autoAlpha:1, display:"block"});
+						}
+				}
         }
     });
     
@@ -105,19 +108,18 @@ $("#slide-nav .button").click(function() {
 //-------------------------
 //	About Page
 //-------------------------
-
 //curtains
-$("#about .curtains").click(function() {
+$("#contact .curtains").click(function() {
     if($(this).hasClass("down")) {
         $(this).removeClass("down");
-		TweenLite.to($("#about img.toggle"), .7, {y:-205});
-        TweenLite.to($("#about img.me"), .7, {y:0});
+		TweenLite.to($("#contact img.toggle"), .7, {y:-205});
+        TweenLite.to($("#contact img.me"), .7, {y:0});
 
 		$(this).addClass("up");
     } else {
 		$(this).removeClass("up");
-		TweenLite.to($("#about img.me"), .7, {y:-205});
-        TweenLite.to($("#about img.toggle"), .7, {y:0});
+		TweenLite.to($("#contact img.me"), .7, {y:-205});
+        TweenLite.to($("#contact img.toggle"), .7, {y:0});
 		$(this).addClass("down");
 	}
 });
@@ -127,3 +129,9 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
 
+//And that funny little thing...
+if($("#me").hasClass("job")) {
+	console.log("Chinese food");
+	} else {
+	console.log("Ramen noodles");
+	}
